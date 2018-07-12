@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Counting words</title>
+</head>
+<body>
+<h1> There are {{ count }} words in your text </h1>
+<h1>Your Text:</h1>
+
+<a href={% url 'home' %} >Start Again</a>
+
+<br>
+
+{{ fulltext }}
+
+
+
+<h1>Most used words:</h1>
+
+{% for word, inx in worddict %}
+
+{{word}} - {{inx}}
+
+<br />
+{% endfor %}
+
+<img src="index.png" alt="Trulli" width="500" height="333" />
+
+</body>
+</html>
